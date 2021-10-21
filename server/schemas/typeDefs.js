@@ -18,10 +18,12 @@ const typeDefs = gql`
     email: String
     petCount: Int
     savedPet: [Pet]
+    donations
   }
   type Pet {
     petId: String
     name: String
+    breed: String
     description: String
     image: String
     link: String

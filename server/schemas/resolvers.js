@@ -43,7 +43,7 @@ const resolvers = {
       return { token, user };
     },
 
-    // cretae new user
+    // create new user
     addUser: async (parent, args) => {
       const user = await User.create(args);
       //   assign token to user
@@ -52,7 +52,7 @@ const resolvers = {
       return { token, user };
     },
 
-    //
+    // save a pet
     savedPet: async (parent, args, context) => {
       // find user and update by user's id
       if (context.user) {
@@ -89,6 +89,8 @@ const resolvers = {
     },
   },
 };
+
+// need to add something for donations - not sure how to build this, will work on it friday
 
 // export resolvers to index.js
 module.exports = resolvers;
