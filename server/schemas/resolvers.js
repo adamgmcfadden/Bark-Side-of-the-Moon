@@ -53,7 +53,7 @@ const resolvers = {
     },
 
     //
-    savePet: async (parent, args, context) => {
+    savedPet: async (parent, args, context) => {
       // find user and update by user's id
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
