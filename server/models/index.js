@@ -1,1 +1,4 @@
-// index file for models -- User, Pets, etc. imports and then export to shemas ( resolvers )
+//  import dependencies - user model
+const User = require("./User");
+
+module.exports = { User };
