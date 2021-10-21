@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLazyQuery } from '@apollo/react-hooks';
-import { QUERY_CHECKOUT } from "../../utils/queries"
+import { useLazyQuery } from "@apollo/react-hooks";
+import { QUERY_CHECKOUT } from "../../utils/queries";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -83,3 +83,5 @@ const Donations = () => {
     </div>
   );
 };
+
+export default Donations;

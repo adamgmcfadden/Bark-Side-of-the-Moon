@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav(props) {
   // nav-tabs to map through
-  const tabs = ["Homepage", "Dashboard", "AdoptionForm", "Login/Signup"];
+  const tabs = ["Homepage", "Dashboard", "AdoptionForm", "Donations", "Login"];
   // changed document.title based on current page
   useEffect(() => {
     document.title = capitalizeFirstLetter(props.currentPage);
