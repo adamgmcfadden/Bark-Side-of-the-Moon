@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.petSlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #417cc0(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #417cc0;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+    
+    animation: float  linear 8s ;
+    animation-iteration-count: 1;
+    opacity: 0;
+    
+  }
+  @keyframes float {
+    0% {
+        margin-left: 0px;
+        opacity: 0;
+        
+    }50% {
+        margin-left: 350px;
+    opacity: 1;
+    }
+    100% {
+        margin-left: 700px;
+        
+        opacity: 0;
+    }
+}
+  
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: rgb(2, 2, 2);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #417cc0;
+  }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.homepage {
+  justify-content: center;
+}
+    
+.dropbtn {
+  background-color: #417cc0;
+  border-radius: 15px;
+  color: white;
+  font-style: italic;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  justify-content: center;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #61e0cf;}
+
+</style>
+</head>
+<body>
+  <div class="homepage justify-content-center">
+      <h1> <i class="fas fa-paw"></i>Anything is Pawsible if You Just Believe <i class="fas fa-paw"></i></h1>
+      <br />
+      <div class="slideshow-container">
+
+<div class="petSlides fade">
+
+<img src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs1.png" style="width:100%"/>
+<div class="text ">Find Me A Forever Home</div>
+</div>
+
+<div class="petSlides fade">
+
+<img src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs2.png" style="width:100%"/>
+<div class="text">Adopt Me Meow</div>
+</div>
+
+<div class="petSlides fade">
+
+<img src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs3.png" style="width:100%"/>
+<div class="text" >Pawsitivity</div>
+</div>
+
+</div>
+<br/>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+      <div class="dropdown">
+        <button class="dropbtn">Choose What Kind of Pet you would like to Adopt</button>
+        <div class="dropdown-content">
+          <a href="#">Cats</a>
+          <a href="#">Dogs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("petSlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
