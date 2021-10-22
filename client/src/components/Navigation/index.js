@@ -1,43 +1,80 @@
-// import dependencies -- react + { useEffect} and capitalizeLetters helper
-import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
+import Signup from "../../pages/Signup";
+import Login from "../../pages/Login";
 
-function Nav(props) {
-  // nav-tabs to map through
-  const tabs = ["Homepage", "Dashboard", "AdoptionForm", "Donations", "Login"];
-  // changed document.title based on current page
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(props.currentPage);
-  });
+import Auth from "../../utils/auth";
+
+const AppNavbar = () => {
+  // set modal display state
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <header className="d-flex flex-row">
-      <h1> Bark Side of the Moon</h1>
-
-      <nav className="col-8 nav-cont">
-        <ul className="d-flex flex-row justify-content-between nav-ul">
-          {/* map through tabs array */}
-          {tabs.map((tab) => (
-            <li className="nav-li" key={tab}>
-              <a
-                // set tab to lowercase with # in front to determine page to change to
-                href={"#" + tab.toLowerCase()}
-                // on click change page to new tab
-                onClick={() => props.handlePageChange(tab)}
-                className={
-                  // current page will have nav-ul-active class
-                  props.currentPage === tab ? "nav-ul-active" : "nav-ul"
-                }
-              >
-                {tab}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <>
+      <Navbar bg="dark" variant="dark" expand="lg">
+        <Container fluid>
+          <Navbar.Brand as={Link} to="/">
+            Bark Side of the Moon
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbar" />
+          <Navbar.Collapse id="navbar">
+            <Nav className="ml-auto">
+              {/* if user is logged in show saved books and logout */}
+              {Auth.loggedIn() ? (
+                <>
+                  <Nav.Link as={Link} to="/dashboard">
+                    Dashboard
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/adoptionForm">
+                    Adoption Form
+                  </Nav.Link>
+                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                </>
+              ) : (
+                <Nav.Link onClick={() => setShowModal(true)}>
+                  Login/Sign Up
+                </Nav.Link>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* set modal data up */}
+      <Modal
+        size="lg"
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby="signup-modal"
+      >
+        {/* tab container to do either signup or login component */}
+        <Tab.Container defaultActiveKey="login">
+          <Modal.Header closeButton>
+            <Modal.Title id="signup-modal">
+              <Nav variant="pills">
+                <Nav.Item>
+                  <Nav.Link eventKey="login">Login</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="signup">Sign Up</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Tab.Content>
+              <Tab.Pane eventKey="login">
+                <Login handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="signup">
+                <Signup handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+            </Tab.Content>
+          </Modal.Body>
+        </Tab.Container>
+      </Modal>
+    </>
   );
-}
+};
 
-// export nav function -- used in header component
-export default Nav;
+export default AppNavbar;
