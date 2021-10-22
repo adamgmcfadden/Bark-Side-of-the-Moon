@@ -28,22 +28,25 @@ function Login(props) {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form class="login-form">
-        <div>
-          <label for="email-login">Email:</label>
-          <input type="text" id="email-login" />
-        </div>
-        <div>
-          <label for="password-login">Password:</label>
-          <input type="password" id="password-login" />
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-      </form>
-    </div>
+    <div class="login-section">
+  <img src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs4.png" />
+    <br/>
+    <h1 class="login">Login</h1>
+    <form class="login-form">
+      <div class="emailLog" >
+        <label for="email-login">Email:</label>
+        <input type="text" id="email-login" />
+      </div>
+      <div class="passLog">
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" />
+      </div>
+      <div>
+        <button type="submit" class="login">Login</button>
+      </div>
+    </form>
+  </div>
   );
-}
+} 
+
 export default Login;

@@ -189,3 +189,400 @@ button:hover {
 button:focus {
   color: var(--primary);
 }
+
+
+/* Homepage */
+.homepage {
+  justify-content: center;
+}
+    
+.dropbtn {
+  background-color: #417cc0;
+  border-radius: 15px;
+  color: white;
+  font-style: italic;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #61e0cf;}
+
+/* Pet Slides */
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.petSlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #417cc0(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #417cc0;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+    
+    animation: float  linear 5s ;
+    animation-iteration-count: 1;
+    opacity: 0;
+    
+  }
+  @keyframes float {
+    0% {
+        margin-left: 0px;
+        opacity: 0;
+        
+    }50% {
+        margin-left: 350px;
+    opacity: 1;
+    }
+    100% {
+        margin-left: 700px;
+        opacity: 0;
+    }
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: rgb(2, 2, 2);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #417cc0;
+  }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* Dashboard Profile Section */
+
+div.profile{
+  /* background-color:midnightblue; */
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  text-align: center;
+ padding: 10px;
+  color: midnightblue;
+width: 100%;
+justify-content: center;
+}
+h1.profile {
+  padding-top: 10px;
+}
+h2.profname {
+  font-style: italic;
+  font-weight: bold;
+}
+h3.profdata {
+  color: rgb(57, 117, 206);
+}
+.dashboard {
+  text-align: center;
+}
+
+/* favourites-cards Section */
+div.favourites-cards {
+  background-color:midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  text-align: center;
+  width: 300px;
+  height: 400px;
+  color: white;
+}
+h2.favs {
+  padding-top: 18px;
+}
+h3.favsname {
+  font-style: italic;
+}
+p.favsdesc {
+  font-size: 15px;
+  font-weight: bold;
+}
+div.favourites-cards img {
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  width: 80%;
+  height: 80%;
+}
+   
+/* Login Section */
+form.login-form {
+  width: 320px;
+  padding: 15px;
+  margin: 0 auto;
+width: 100%;
+padding-left: 590px;
+}
+
+input {
+font-size: 1rem;
+padding: 0.25rem;
+border: 2px solid midnightblue;
+outline: none;
+border-radius: 10px;
+padding-bottom: 10px;
+
+}
+textarea {
+padding-top: 5px;
+border-radius: 10px;
+width: 500px;
+height: 150px;
+padding: 5px;
+color: rgb(0, 0, 0);
+}
+
+button.login {
+  background-color: midnightblue;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+}
+label {
+color: midnightblue;
+font-weight: bolder;
+font-size: 20px;
+padding: 5px;
+}
+
+div.container {
+  width: 50%;
+  padding: 10px;
+}
+h1.login {
+  color: midnightblue;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-left: 700px;
+}
+div.emailLog {
+  width: 50%;
+  padding: 10px;
+}
+
+div.emailLog {
+  width: 100%;
+}
+
+
+ /* Signup Section */
+ form.login-form {
+  width: 320px;
+  padding: 15px;
+  margin: 0 auto;
+width: 100%;
+padding-left: 590px;
+}
+
+input {
+font-size: 1rem;
+padding: 0.25rem;
+border: 2px solid midnightblue;
+outline: none;
+border-radius: 10px;
+padding-bottom: 10px;
+}
+textarea {
+padding-top: 5px;
+border-radius: 10px;
+width: 500px;
+height: 150px;
+padding: 5px;
+color: rgb(0, 0, 0);
+
+}
+button.signup-btn {
+  background-color: midnightblue;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+}
+label {
+color: midnightblue;
+font-weight: bolder;
+font-size: 20px;
+padding: 5px;
+
+}
+
+
+h1.signup {
+  color: midnightblue;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-left: 410px;
+}
+input#email-signup{
+  margin-left: 40px;
+}
+
+/* Donations Page Section */
+.donations {
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  padding: 20px;
+  width: 80%;
+  margin-left: 80px;
+  margin-top: 120px;
+}
+h1.donate {
+  color: midnightblue;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}
+
+img.img-donate {
+  width: 80%;
+  width: 400px;
+  margin-left: 165px;
+  border: 20px solid midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+form.donate-form {
+  width: 320px;
+  padding: 15px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 210px;
+}
+input#email {
+  margin-left: 44px;
+}
+input {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 2px solid midnightblue;
+  outline: none;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+textarea {
+  padding-top: 5px;
+  border-radius: 10px;
+  width: 500px;
+  height: 150px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+}
+
+button.donate-btn {
+  background-color: midnightblue;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+}
+label {
+  color: midnightblue;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 5px;
+}
+div.form-group {
+  padding: 10px;
+}
+
+/* Success Page Section */
+.congrats{
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  padding: 20px;
+  width: 80%;
+  margin-left: 80px;
+    margin-top: 120px;
+} 
+h1.thankyou , h2.thankyou {
+  color: midnightblue;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}
+
+img.img-thanks {
+  width: 80%;
+  width: 400px;
+ margin-left: 165px;
+  border: 20px solid midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}

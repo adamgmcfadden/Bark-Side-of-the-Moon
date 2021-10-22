@@ -7,14 +7,14 @@ function Success() {
   const [addDonation] = useMutation(ADD_DONATION);
 
   return (
-    <div>
+    <div class="congrats">
       <Thankyou>
-        <h1>Congradulations!!</h1>
-        <h2>
+        <h1 class="thankyou">Congradulations!!</h1>
+        <img src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/thankyou.jpg" class="img-thanks" alt="Dog waving to say thank you" />
+        <h2 class="thankyou">
           Thank You For Your Generosity, Our Furry Friends Appreciate Your
-          Support. 
+          Support!!
         </h2>
-        <h2>You will now be redirected to the Homepage</h2>
       </Thankyou>
     </div>
   );
