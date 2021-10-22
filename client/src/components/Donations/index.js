@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from '@apollo/react-hooks';
 import { QUERY_CHECKOUT } from "../../utils/queries"
+import {Auth} from '../../utils/auth'
+
+
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -40,9 +43,15 @@ const Donations = () => {
   };
 
   return (
-    <div className="donations">
-      <h1>Donate Now </h1>
-      <form>
+    <div class="donations">
+      <h1 class="donate">Donate Now</h1>
+      <img
+        class="img-donate"
+        src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/donate.jpg"
+        alt="Kitten and Puppy"
+      />
+      <br /><br />
+      <form class="donate-form">
         <div className="form-group">
           <label htmlFor="firstname">First Name:&nbsp;</label>
           <input
@@ -51,6 +60,7 @@ const Donations = () => {
             id="firstname"
             placeholder="Enter First Name"
           />
+          <br /><br />
           <label htmlFor="lastname">Last Name:&nbsp;</label>
           <input
             type="text"
@@ -58,6 +68,8 @@ const Donations = () => {
             id="lastname"
             placeholder="Enter Last Name"
           />
+
+          <br /><br />
           <label htmlFor="email">Email:&nbsp;</label>
           <input
             type="email"
@@ -65,21 +77,27 @@ const Donations = () => {
             id="email"
             placeholder="Enter Email"
           />
+          <br /><br />
           <label htmlFor="donation">Donation Amount: &nbsp;</label>
           <input
             type="number"
             className="form-control"
             id="donation"
             placeholder="Enter Donation"
-            onChange={handleChange}
+            onChange="{handleChange}"
           />
         </div>
+        <br /><br />
         {Auth.loggedIn() ? (
-          <button onClick={submitCheckout}>Donate Now</button>
+        <button onClick="{submitCheckout}" class="donate-btn">
+          Donate Now
+        </button>
         ) : (
-          <span>(login to donate)</span>
+        <span>(login to donate)</span>
         )}
       </form>
     </div>
   );
 };
+
+export default Donations;
