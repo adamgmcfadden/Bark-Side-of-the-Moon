@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLazyQuery } from "@apollo/react-hooks";
+import { useLazyQuery } from '@apollo/react-hooks';
 import { QUERY_CHECKOUT } from "../../utils/queries";
+import { useState } from "react";
+import { ADD_TO_DONATION} from '../../utils/actions'
+import { useStoreContext } from "../../utils/GlobalState";
+
+import donationimage from "../../assets/images/donate.jpg";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -23,10 +28,13 @@ const Donations = () => {
     setLoading(true);
     setError(false);
     setSuccess(false);
+    console.log(donation);
+    dispatch({ type: ADD_TO_DONATION, donation: donation });
+    
     try {
       const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({
-        items: [{ sku: "sku_H9jgxm7mz2e0n9", quantity: 1 }],
+        // items: [{ sku: "sku_H9jgxm7mz2e0n9", quantity: 1 }],
         successUrl: "http://localhost:3000/success",
         cancelUrl: "http://localhost:3000/cancel",
       });
@@ -40,9 +48,15 @@ const Donations = () => {
   };
 
   return (
-    <div className="donations">
-      <h1>Donate Now </h1>
-      <form>
+    <div class="donations">
+      <h1 class="donate">Donate Now</h1>
+      <img
+        class="img-donate"
+        src={donationimage}
+        alt="Kitten and Puppy"
+      />
+      <br /><br />
+      <form class="donate-form">
         <div className="form-group">
           <label htmlFor="firstname">First Name:&nbsp;</label>
           <input
@@ -51,6 +65,7 @@ const Donations = () => {
             id="firstname"
             placeholder="Enter First Name"
           />
+          <br /><br />
           <label htmlFor="lastname">Last Name:&nbsp;</label>
           <input
             type="text"
@@ -58,6 +73,8 @@ const Donations = () => {
             id="lastname"
             placeholder="Enter Last Name"
           />
+
+          <br /><br />
           <label htmlFor="email">Email:&nbsp;</label>
           <input
             type="email"
@@ -65,6 +82,7 @@ const Donations = () => {
             id="email"
             placeholder="Enter Email"
           />
+          <br /><br />
           <label htmlFor="donation">Donation Amount: &nbsp;</label>
           <input
             type="number"
@@ -72,13 +90,14 @@ const Donations = () => {
             id="donation"
             placeholder="Enter Donation"
             onChange={handleChange}
+            value={donation}
           />
         </div>
-        {Auth.loggedIn() ? (
-          <button onClick={submitCheckout}>Donate Now</button>
-        ) : (
-          <span>(login to donate)</span>
-        )}
+        <br /><br/>
+        <button onClick={handleSubmit} class="donate-btn">
+          Donate
+        </button>
+       
       </form>
     </div>
   );

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tester</title>
+    <style>
+      .donations {
+        border-radius: 20px;
+        border: 1px solid black;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+        padding: 20px;
+        width: 80%;
+        margin-left: 80px;
+        margin-top: 120px;
+      }
+      h1.donate {
+        color: midnightblue;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+        width: 100%;
+      }
+
+      img.img-cats {
+        width: 100%;
+        border-left: 10%;
+      
+      }
+      
+
+      button.btn-fav {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.5;
+        border-radius: 50%;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        padding: 15px 20px;
+      }
+      
+      .cats-cards {
+        background-color:midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  text-align: center;
+  width: 300px;
+  height: 450px;
+  color: white;
+      }
+      div.card-text {
+        padding-top: 150px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div className="catscards row justify-content-center"> 
+    <h1>Cats</h1>
+    <div class="cats-cards">
+      
+        <!-- <img class="img-cats" src={process.env.PUBLIC_URL + cats.image} alt="Cats Profiles" /> -->
+        <img class="img-cats" src="client/src/assets/images/GettyImages-588935825.jpg" alt="Cats Profiles" />
+        
+        <br/>
+        <br/>
+        <div class="card-text">
+          <h3>{cats.name}</h3>
+          <h3>{cats.description}</h3>
+          <h3>{cats.age}</h3>
+          <a href={cats.link} target="_blank" alt="Link to cats page">
+            <button class="btn-fav"><i class="fas fa-heart"></i><3</button>
+    </div>
+    
+    </div>
+  </body>
+</html>
