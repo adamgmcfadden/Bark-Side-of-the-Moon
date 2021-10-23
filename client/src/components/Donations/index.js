@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-<<<<<<< HEAD
 import { useLazyQuery } from '@apollo/react-hooks';
 import { QUERY_CHECKOUT } from "../../utils/queries"
 import {Auth} from '../../utils/auth'
 
 
-=======
-import { useLazyQuery } from "@apollo/react-hooks";
-import { QUERY_CHECKOUT } from "../../utils/queries";
->>>>>>> a2f11e03b5e9804b3ba8362afa19a9f67e899264
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
