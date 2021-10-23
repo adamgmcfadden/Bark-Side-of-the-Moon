@@ -7,6 +7,21 @@ import Login from "./pages/Login";
 import AppNavbar from "./components/Navigation";
 
 import Footer from "./components/Footer";
+// import Donations from "./components/Donations";
+// import { StoreProvider } from "./utils/GlobalState";
+// // import Dashboard from "./pages/Dashboard";
+
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <Header /> */}
+//       <StoreProvider>
+//       {/* <Dashboard /> */}
+//       <Donations />
+//       </StoreProvider>
+//       {/* <Footer /> */}
+//     </div>
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import {

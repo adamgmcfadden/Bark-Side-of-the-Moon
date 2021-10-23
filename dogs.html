@@ -21,114 +21,57 @@
         width: 100%;
       }
 
-      img.img-donate {
-        width: 80%;
-        width: 400px;
-        margin-left: 165px;
-        border: 20px solid midnightblue;
-        box-shadow: 0 0 20px rgb(0, 0, 0);
-      }
-      form.donate-form {
-        width: 320px;
-        padding: 15px;
-        margin: 0 auto;
+      img.img-cats {
         width: 100%;
-        padding-left: 210px;
+        border-left: 10%;
+      
       }
-      input#email {
-        margin-left: 44px;
-      }
-      input {
-        font-size: 1rem;
-        padding: 0.25rem;
-        border: 2px solid midnightblue;
-        outline: none;
-        border-radius: 10px;
-        padding-bottom: 10px;
-      }
-      textarea {
-        padding-top: 5px;
-        border-radius: 10px;
-        width: 500px;
-        height: 150px;
-        padding: 5px;
-        color: rgb(0, 0, 0);
-      }
+      
 
-      button.donate-btn {
-        background-color: midnightblue;
-        border-radius: 15px;
+      button.btn-fav {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.5;
+        border-radius: 50%;
         color: white;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 30px;
         padding: 15px 20px;
       }
-      label {
-        color: midnightblue;
-        font-weight: bolder;
-        font-size: 20px;
-        padding: 5px;
+      
+      .cats-cards {
+        background-color:midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  text-align: center;
+  width: 300px;
+  height: 450px;
+  color: white;
       }
-      div.form-group {
+      div.card-text {
+        padding-top: 150px;
         padding: 10px;
       }
     </style>
   </head>
   <body>
-    <div class="donations">
-      <h1 class="donate">Donate Now</h1>
-      <img
-        class="img-donate"
-        src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/donate.jpg"
-        alt="Kitten and Puppy"
-      />
-      <br /><br />
-      <form class="donate-form">
-        <div className="form-group">
-          <label htmlFor="firstname">First Name:&nbsp;</label>
-          <input
-            type="text"
-            className="form-control"
-            id="firstname"
-            placeholder="Enter First Name"
-          />
-          <br /><br />
-          <label htmlFor="lastname">Last Name:&nbsp;</label>
-          <input
-            type="text"
-            className="form-control"
-            id="lastname"
-            placeholder="Enter Last Name"
-          />
-
-          <br /><br />
-          <label htmlFor="email">Email:&nbsp;</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Enter Email"
-          />
-          <br /><br />
-          <label htmlFor="donation">Donation Amount: &nbsp;</label>
-          <input
-            type="number"
-            className="form-control"
-            id="donation"
-            placeholder="Enter Donation"
-            onChange="{handleChange}"
-          />
-        </div>
-        <br /><br />
-        {Auth.loggedIn() ? (
-        <button onClick="{submitCheckout}" class="donate-btn">
-          Donate Now
-        </button>
-        ) : (
-        <span>(login to donate)</span>
-        )}
-      </form>
+    
+    <div className="catscards row justify-content-center"> 
+    <h1>Cats</h1>
+    <div class="cats-cards">
+      
+        <!-- <img class="img-cats" src={process.env.PUBLIC_URL + cats.image} alt="Cats Profiles" /> -->
+        <img class="img-cats" src="client/src/assets/images/GettyImages-588935825.jpg" alt="Cats Profiles" />
+        
+        <br/>
+        <br/>
+        <div class="card-text">
+          <h3>{cats.name}</h3>
+          <h3>{cats.description}</h3>
+          <h3>{cats.age}</h3>
+          <a href={cats.link} target="_blank" alt="Link to cats page">
+            <button class="btn-fav"><i class="fas fa-heart"></i><3</button>
+    </div>
+    
     </div>
   </body>
 </html>
