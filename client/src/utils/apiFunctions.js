@@ -52,8 +52,6 @@ function searchAge(pets, animalAge) {
     return pets;
 }
 
-
-
 // Sample Search for *BSoTM App* data
 function petSearch(animalType, animalBreed, animalAge) {
     // Get data
