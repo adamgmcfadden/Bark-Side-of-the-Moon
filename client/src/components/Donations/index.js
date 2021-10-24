@@ -5,19 +5,31 @@ import { QUERY_CHECKOUT } from "../../utils/queries";
 import { useState } from "react";
 import { ADD_TO_DONATION} from '../../utils/actions'
 import { useStoreContext } from "../../utils/GlobalState";
-
 import donationimage from "../../assets/images/donate.jpg";
 
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+
+  
+
+
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Donations = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  const [donation, setDonation] = useState(0);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session })
+      })
+    }
+  }, [data]);
+
+
+  // const [donation, setDonation] = useState(0);
+  // const [error, setError] = useState(false);
+  // const [success, setSuccess] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setDonation(e.target.value);
@@ -98,9 +110,12 @@ const Donations = () => {
           Donate
         </button>
        
+      
+
+
       </form>
     </div>
   );
 };
 
-export default Donations;
+export default Cart;

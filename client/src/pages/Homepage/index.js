@@ -3,48 +3,49 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-{
-  /* <script>
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+//  <script>
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("petSlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script> */
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("petSlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";  
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+// }
+// </script> 
+// }
 
 function Homepage() {
   return (
     <div class="homepage justify-content-center">
       <h1>
-        <i class="fas fa-paw"></i>Anything is Pawsible if You Just Believe
+       Anything is Pawsible if You Just Believe &nbsp;
         <i class="fas fa-paw"></i>
       </h1>
 
       <br />
       <div class="slideshow-container">
         <div class="petSlides fade">
+          
           <img
             src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs1.png"
             // style="width:100%"
