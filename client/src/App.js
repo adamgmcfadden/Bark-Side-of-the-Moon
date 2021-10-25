@@ -5,12 +5,10 @@ import Homepage from "./pages/Homepage";
 import AdoptionForm from "./pages/AdoptionForm";
 import Login from "./pages/Login";
 import AppNavbar from "./components/Navigation";
-
 import Footer from "./components/Footer";
 // import Donations from "./components/Donations";
 // import { StoreProvider } from "./utils/GlobalState";
-// // import Dashboard from "./pages/Dashboard";
-
+// import Dashboard from "./pages/Dashboard";
 
 // function App() {
 //   return (
