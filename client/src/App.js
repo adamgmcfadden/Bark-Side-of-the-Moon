@@ -7,16 +7,9 @@ import Login from "./pages/Login";
 import AppNavbar from "./components/Navigation";
 
 import Footer from "./components/Footer";
-<<<<<<< HEAD
 import Donations from "./components/Donations";
 import { StoreProvider } from "./utils/GlobalState";
-// import Dogs from "./pages/Dogs";
-// import Cats from "./pages/Cats";
-=======
-// import Donations from "./components/Donations";
-// import { StoreProvider } from "./utils/GlobalState";
-// // import Dashboard from "./pages/Dashboard";
->>>>>>> 2c6b5dae9de380b076b652ba88f5233e98e65994
+import Stripe from "./components/Stripe";
 
 
 // function App() {
@@ -71,6 +64,7 @@ function App() {
           <AppNavbar />
           <Switch>
             <Route exact path="/donations" component={Donations} />
+            <Route exact path="/stripe" component={Stripe} />
             <Route exact path="/" component={Homepage} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/adoptionForm" component={AdoptionForm} />

@@ -2,7 +2,9 @@
 
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import dogs1 from "../../assets/images/dogs1.png";
+import dogs3 from "../../assets/images/dogs3.png";
+import dogs6 from "../../assets/images/dogs6.png";
 
 //  <script>
 // var slideIndex = 1;
@@ -47,7 +49,7 @@ function Homepage() {
         <div class="petSlides fade">
           
           <img
-            src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs1.png"
+            src={dogs1}
             // style="width:100%"
           />
           <div class="text ">Find Me A Forever Home</div>
@@ -55,7 +57,7 @@ function Homepage() {
 
         <div class="petSlides fade">
           <img
-            src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs6.png"
+            src={dogs6}
             // style="width:100%"
           />
           <div class="text">Adopt Me Meow</div>
@@ -63,7 +65,7 @@ function Homepage() {
 
         <div class="petSlides fade">
           <img
-            src="../../Lakyn/Bark-Side-of-the-Moon/client/src/assets/images/dogs3.png"
+            src={dogs3}
             // style="width:100%"
           />
           <div class="text">Pawsitivity</div>

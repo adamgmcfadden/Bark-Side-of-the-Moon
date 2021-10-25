@@ -1,6 +1,6 @@
 {
   "short_name": "Bark-Side-of-the-Moon",
-  "name": "Create React App Sample",
+  "name": "Bark-Side-of-the-Moon",
   "icons": [
     {
       "src": "favicon.jpg",
@@ -45,7 +45,13 @@
       "src": "thankyou.jpg",
       "type": "image/jpg",
       "sizes": "1024x512"
+    },
+    {
+      "src": "paws.jpg",
+      "type": "image/jpg",
+      "sizes": "612x361"
     }
+
   ],
   "start_url": "/",
   "display": "standalone",

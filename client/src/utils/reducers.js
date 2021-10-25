@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
   switch (action.type) {
     case ADD_TO_DONATION:
       return {
-      donation: state
+      donation: action.donation
       };
 
     default:
