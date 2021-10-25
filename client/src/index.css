@@ -237,7 +237,7 @@ button:focus {
 
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
-.petSlides {display: none}
+/* .petSlides {display: none} */
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -264,8 +264,8 @@ img {vertical-align: middle;}
     width: 100%;
     text-align: left;
     
-    animation: float  linear 5s ;
-    animation-iteration-count: 1;
+    animation: float  linear 7s ;
+    animation-iteration-count: 2;
     opacity: 0;
     
   }
@@ -301,9 +301,9 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 6s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 10s;
 }
 
 @-webkit-keyframes fade {

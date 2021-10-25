@@ -8,10 +8,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import donationimage from "../../assets/images/donate.jpg";
 
 
-  
-
-
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51JoExyI4YZmdG6GEo3MDLTpbKn07zGwztg4qTwI3kS3RZ41NW6gkUmTqVKkjVmB3Z1DZB5B0TtgkUfquTkHicdPD00einhfUlN');
 
 const Donations = () => {
   const [state, dispatch] = useStoreContext();
@@ -26,10 +23,10 @@ const Donations = () => {
   }, [data]);
 
 
-  // const [donation, setDonation] = useState(0);
-  // const [error, setError] = useState(false);
-  // const [success, setSuccess] = useState(false);
-  // const [loading, setLoading] = useState(false);
+  const [donation, setDonation] = useState(0);
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setDonation(e.target.value);
@@ -43,20 +40,20 @@ const Donations = () => {
     console.log(donation);
     dispatch({ type: ADD_TO_DONATION, donation: donation });
     
-    try {
-      const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({
-        // items: [{ sku: "sku_H9jgxm7mz2e0n9", quantity: 1 }],
-        successUrl: "http://localhost:3000/success",
-        cancelUrl: "http://localhost:3000/cancel",
-      });
-      if (error) {
-        setError(error);
-        setLoading(false);
-      }
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   const stripe = await stripePromise;
+    //   const { error } = await stripe.redirectToCheckout({
+    //     // items: [{ sku: "sku_H9jgxm7mz2e0n9", quantity: 1 }],
+    //     successUrl: "http://localhost:3000/success",
+    //     cancelUrl: "http://localhost:3000/cancel",
+    //   });
+    //   if (error) {
+    //     setError(error);
+    //     setLoading(false);
+    //   }
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
   return (
@@ -109,7 +106,26 @@ const Donations = () => {
         <button onClick={handleSubmit} class="donate-btn">
           Donate
         </button>
-       
+        <section class="pre-set-donations">
+            <button
+              data-checkout-mode="payment"
+              data-price-id="sku_GU4JYXyvvRb2sX"
+            >
+            $5.00 
+            </button>
+            <button
+              data-checkout-mode="payment"
+              data-price-id="sku_GU4KO8nfdg8G2Z"
+            >
+           $15.00 
+            </button>
+            <button
+              data-checkout-mode="payment"
+              data-price-id="sku_GU4LB0wBViiYsm"
+            >
+           $50.00 
+            </button>
+          </section> 
       
 
 
@@ -118,4 +134,4 @@ const Donations = () => {
   );
 };
 
-export default Cart;
+export default Donations;
