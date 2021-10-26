@@ -211,6 +211,9 @@ button:focus {
 }
 
 /* Homepage */
+div#navbar {
+  justify-content: flex-end;
+}
 
 .homepage {
   justify-content: center;
@@ -322,7 +325,7 @@ img {
   text-align: left;
 
   animation: float linear 7s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
   opacity: 0;
 }
 @keyframes float {
