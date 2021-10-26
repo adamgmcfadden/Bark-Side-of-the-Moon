@@ -1,4 +1,5 @@
 // Cats Section
+
 import React from 'react';
 const petfinder = require("@petfinder/petfinder-js");   // Petfinder
 
@@ -88,3 +89,4 @@ function catCards() {
 }
 
 export default catCards;
+
