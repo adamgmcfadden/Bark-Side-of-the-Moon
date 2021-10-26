@@ -3,9 +3,6 @@
 import React from 'react';
 const petfinder = require("@petfinder/petfinder-js");   // Petfinder
 
-// Setup Petfinder API Client
-const pfClient = new petfinder.Client({ apiKey: api_key, secret: api_secret });
-
 // Globals
 const api_key = 'iEi7zznBCnZgykZhogUiQVMBVvCszCqyWb3C96dCLAeRnVySXK';   // Petfinder Key
 const api_secret = '0DWQGue3dl1r1CBvs9NmT31IzKKMcNqTqPCYfpPl';  // Petfiner Secret
@@ -17,8 +14,10 @@ const pfClient = new petfinder.Client({ apiKey: api_key, secret: api_secret });
 
 function catCards() {
 
+    const newCatData = [];
+
     // Array which will query and save a cats array of cats
-    const catData = () => {
+    function catData() {
 
         // Use petfinder client to make a query by type
         pfClient.animal.search({
@@ -31,7 +30,7 @@ function catCards() {
                 // Then set the data
                 const searchResults = res.data.animals;
 
-                console.log(searchResults);
+                //console.log(searchResults);
 
                 // Create an Array we will load our cats into
                 const cats = [];
@@ -45,8 +44,8 @@ function catCards() {
                             age: searchResults[i].age,
                             link: searchResults[i].url,
                             image: fillerIMG
-                        }
-                        cats.push(currentCat);
+                        };
+                        newCatData.push(currentCat);
                     } else {
                         let currentCat =
                         {
@@ -56,19 +55,19 @@ function catCards() {
                             age: searchResults[i].age,
                             link: searchResults[i].url,
                             image: searchResults[i].primary_photo_cropped.small
-                        }
-                        cats.push(currentCat);
+                        };
+                        newCatData.push(currentCat);
                     }
                 }
-                if (cats) console.log(cats);
                 return cats;
             })
     }
-
+    catData();
+    console.log(newCatData);
     return (
-        <div className="catscards row justify-content-center" key={i}>
+        <div className="catscards row justify-content-center" >
             <h1 class="cats">Cats</h1>
-            {catData.map((cats, i) => {
+            {newCatData.map((cats) => {
                 return (
                     <div class="cats-cards">
                         <img class="img-cats" src={process.env.PUBLIC_URL + cats.image} alt="Cats Profiles" />
