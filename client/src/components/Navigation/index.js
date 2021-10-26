@@ -12,9 +12,10 @@ const AppNavbar = () => {
 
   return (
     <>
+      <div className="header">test</div>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand className="header" as={Link} to="/">
             Bark Side of the Moon
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar" />
