@@ -237,7 +237,7 @@ button:focus {
 
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
-.petSlides {display: none}
+/* .petSlides {display: none} */
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -264,8 +264,8 @@ img {vertical-align: middle;}
     width: 100%;
     text-align: left;
     
-    animation: float  linear 5s ;
-    animation-iteration-count: 1;
+    animation: float  linear 7s ;
+    animation-iteration-count: 2;
     opacity: 0;
     
   }
@@ -301,9 +301,9 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 6s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 10s;
 }
 
 @-webkit-keyframes fade {
@@ -585,4 +585,45 @@ img.img-thanks {
  margin-left: 165px;
   border: 20px solid midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+h1.cats {
+  color: midnightblue;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}
+
+/* Dog & Cat Cards */
+img.img-cats {
+  width: 100%;
+  border-left: 10%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+button.btn-fav {
+  background-color: rgb(51, 162, 182);
+  opacity: .8;
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  margin-bottom: 50px;
+  padding: 15px 20px;
+}
+
+.cats-cards {
+  border-radius: 15px;
+  background-color:midnightblue;
+box-shadow: 0 0 20px rgb(0, 0, 0);
+text-align: center;
+width: 280px;
+height: 390px;
+color: white;
+margin: 20px;
+}
+div.card-text {
+ margin-top: -5px ;
+ text-align: center;
+  font-size: 12px;
 }
