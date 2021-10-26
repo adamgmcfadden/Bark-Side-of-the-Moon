@@ -24,6 +24,26 @@ body {
   margin: 0;
   height: 100%;
 }
+/* fadein header welcome text stylying*/
+.header1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  animation: fadeIn linear 15s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* global styling from padding to colors and font size, weight and family */
 body {
@@ -190,20 +210,19 @@ button:focus {
   color: var(--primary);
 }
 
-
 /* Homepage */
 
 .homepage {
-    justify-content: center;
+  justify-content: center;
 }
 h1.title {
   color: #417cc0;
- margin-top: 50px;
- font-size: 43px;
- display: flex;
+  margin-top: 50px;
+  font-size: 43px;
+  display: flex;
   justify-content: center;
 }
-    
+
 .dropbtn {
   display: flex;
   justify-content: center;
@@ -217,9 +236,7 @@ h1.title {
   padding: 20px;
   font-size: 16px;
   border: none;
-}  
-
-
+}
 
 .dropdown {
   margin-top: 80px;
@@ -232,32 +249,47 @@ h1.title {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
-
 }
 
 .dropdown-content a {
   background-color: #45a195;
- 
-  color:white;
+
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: #61e0cf;}
+.dropdown:hover .dropbtn {
+  background-color: #61e0cf;
+}
 
 /* Pet Slides */
 
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.petSlides {display: block; width: 100%;}
-img {vertical-align: middle;}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.petSlides {
+  display: block;
+  width: 100%;
+}
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -265,65 +297,64 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   display: flex;
-
 }
 .dotss {
   display: flex;
   justify-content: center;
-  
 }
 
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: #417cc0(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #417cc0;
-    font-weight: bolder;
-    font-style: italic;
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: left;
-    
-    animation: float  linear 7s ;
-    animation-iteration-count: 2;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #417cc0(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #417cc0;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+
+  animation: float linear 7s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+@keyframes float {
+  0% {
+    margin-left: 0px;
     opacity: 0;
-    
   }
-  @keyframes float {
-    0% {
-        margin-left: 0px;
-        opacity: 0;
-        
-    }50% {
-        margin-left: 350px;
+  50% {
+    margin-left: 350px;
     opacity: 1;
-    }
-    100% {
-        margin-left: 700px;
-        opacity: 0;
-    }
+  }
+  100% {
+    margin-left: 700px;
+    opacity: 0;
+  }
 }
 
 .dot {
-   margin-left: 450px;
-    height: 20px;
-    width: 20px;
-    margin: 0 2px;
-    background-color: rgb(2, 2, 2);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #417cc0;
-  }
+  margin-left: 450px;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: rgb(2, 2, 2);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #417cc0;
+}
 
 /* Fading animation */
 .fade {
@@ -334,31 +365,42 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
 }
-
 
 /* Dashboard Profile Section */
 
-div.profile{
+div.profile {
   /* background-color:midnightblue; */
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
- padding: 10px;
+  padding: 10px;
   color: midnightblue;
-width: 100%;
-justify-content: center;
+  width: 100%;
+  justify-content: center;
 }
 h1.profile {
   padding-top: 10px;
@@ -376,7 +418,7 @@ h3.profdata {
 
 /* favourites-cards Section */
 div.favourites-cards {
-  background-color:midnightblue;
+  background-color: midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
   width: 300px;
@@ -398,32 +440,31 @@ div.favourites-cards img {
   width: 80%;
   height: 80%;
 }
-   
+
 /* Login Section */
 form.login-form {
   width: 320px;
   padding: 15px;
   margin: 0 auto;
-width: 100%;
-padding-left: 590px;
+  width: 100%;
+  padding-left: 590px;
 }
 
 input {
-font-size: 1rem;
-padding: 0.25rem;
-border: 2px solid midnightblue;
-outline: none;
-border-radius: 10px;
-padding-bottom: 10px;
-
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 2px solid midnightblue;
+  outline: none;
+  border-radius: 10px;
+  padding-bottom: 10px;
 }
 textarea {
-padding-top: 5px;
-border-radius: 10px;
-width: 500px;
-height: 150px;
-padding: 5px;
-color: rgb(0, 0, 0);
+  padding-top: 5px;
+  border-radius: 10px;
+  width: 500px;
+  height: 150px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
 }
 
 button.login {
@@ -436,10 +477,10 @@ button.login {
   padding: 15px 20px;
 }
 label {
-color: midnightblue;
-font-weight: bolder;
-font-size: 20px;
-padding: 5px;
+  color: midnightblue;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 5px;
 }
 
 div.container {
@@ -461,32 +502,30 @@ div.emailLog {
   width: 100%;
 }
 
-
- /* Signup Section */
- form.login-form {
+/* Signup Section */
+form.login-form {
   width: 320px;
   padding: 15px;
   margin: 0 auto;
-width: 100%;
-padding-left: 590px;
+  width: 100%;
+  padding-left: 590px;
 }
 
 input {
-font-size: 1rem;
-padding: 0.25rem;
-border: 2px solid midnightblue;
-outline: none;
-border-radius: 10px;
-padding-bottom: 10px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 2px solid midnightblue;
+  outline: none;
+  border-radius: 10px;
+  padding-bottom: 10px;
 }
 textarea {
-padding-top: 5px;
-border-radius: 10px;
-width: 500px;
-height: 150px;
-padding: 5px;
-color: rgb(0, 0, 0);
-
+  padding-top: 5px;
+  border-radius: 10px;
+  width: 500px;
+  height: 150px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
 }
 button.signup-btn {
   background-color: midnightblue;
@@ -498,13 +537,11 @@ button.signup-btn {
   padding: 15px 20px;
 }
 label {
-color: midnightblue;
-font-weight: bolder;
-font-size: 20px;
-padding: 5px;
-
+  color: midnightblue;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 5px;
 }
-
 
 h1.signup {
   color: midnightblue;
@@ -512,7 +549,7 @@ h1.signup {
   font-weight: bolder;
   margin-left: 410px;
 }
-input#email-signup{
+input#email-signup {
   margin-left: 40px;
 }
 
@@ -570,7 +607,6 @@ textarea {
 }
 
 button.donate-btn {
-
   background-color: midnightblue;
   border-radius: 15px;
   color: white;
@@ -590,16 +626,17 @@ div.form-group {
 }
 
 /* Success Page Section */
-.congrats{
+.congrats {
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 20px rgb(0, 0, 0);
   padding: 20px;
   width: 80%;
   margin-left: 80px;
-    margin-top: 120px;
-} 
-h1.thankyou , h2.thankyou {
+  margin-top: 120px;
+}
+h1.thankyou,
+h2.thankyou {
   color: midnightblue;
   font-size: 30px;
   font-weight: bolder;
@@ -610,7 +647,7 @@ h1.thankyou , h2.thankyou {
 img.img-thanks {
   width: 80%;
   width: 400px;
- margin-left: 165px;
+  margin-left: 165px;
   border: 20px solid midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
@@ -629,10 +666,9 @@ img.img-cats {
   border-radius: 15px 15px 0px 0px;
 }
 
-
 button.btn-fav {
   background-color: rgb(51, 162, 182);
-  opacity: .8;
+  opacity: 0.8;
   border-radius: 50%;
   color: white;
   font-size: 10px;
@@ -642,16 +678,16 @@ button.btn-fav {
 
 .cats-cards {
   border-radius: 15px;
-  background-color:midnightblue;
-box-shadow: 0 0 20px rgb(0, 0, 0);
-text-align: center;
-width: 280px;
-height: 390px;
-color: white;
-margin: 20px;
+  background-color: midnightblue;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  text-align: center;
+  width: 280px;
+  height: 390px;
+  color: white;
+  margin: 20px;
 }
 div.card-text {
- margin-top: -5px ;
- text-align: center;
+  margin-top: -5px;
+  text-align: center;
   font-size: 12px;
 }

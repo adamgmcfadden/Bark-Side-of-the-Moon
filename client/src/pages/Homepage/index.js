@@ -1,12 +1,9 @@
 // Homepage code here
-import "./homepage.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import dogs1 from "../../assets/images/dogs1.png";
 import dogs3 from "../../assets/images/dogs3.png";
 import dogs6 from "../../assets/images/dogs6.png";
-
-
 
 function Homepage() {
   <style jsx>{`
@@ -83,7 +80,6 @@ function Homepage() {
         </div>
       </div>
     </div>
-
   );
 }
 

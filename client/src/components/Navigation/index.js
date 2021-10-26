@@ -12,7 +12,11 @@ const AppNavbar = () => {
 
   return (
     <>
-      <div className="header">test</div>
+      <div class="header1">
+        {" "}
+        🐾 Welcome to the Bark Side of the Moon, Where you find the most cutest
+        pets in the plannnet🐾
+      </div>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand className="header" as={Link} to="/">
