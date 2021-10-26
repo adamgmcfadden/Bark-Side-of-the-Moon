@@ -5,17 +5,17 @@ import { FaHeart } from "react-icons/fa";
 function dogCards() {
   return (
     <div className="catscards row justify-content-center" key={i}>
-      <h1 class="cats">Dogs</h1>
+      <h1 className="cats">Dogs</h1>
       {data.map((dogs, i) => {
         return (
-          <div class="cats-cards">
+          <div className="cats-cards">
             <img
-              class="img-cats"
+              className="img-cats"
               src={process.env.PUBLIC_URL + dogs.image}
               alt="Dog Profiles"
             />
             <br />
-            <div class="card-text">
+            <div className="card-text">
               <h2>{cats.name}</h2>
               <h3>{cats.description}</h3>
               <h3>{dogs.breed}</h3>
@@ -23,7 +23,7 @@ function dogCards() {
               <a href={dogs.link} target="_blank" alt="Link to dogs page">
                 Link
               </a>
-              <button class="btn-fav">
+              <button className="btn-fav">
                 <FaHeart />
               </button>
             </div>
