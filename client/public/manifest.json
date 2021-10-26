@@ -1,24 +1,59 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bark-Side-of-the-Moon",
+  "name": "Bark-Side-of-the-Moon",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "petfavicon.png",
+      "sizes": "31x27",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "dogs1.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "1000x463"
     },
     {
-      "src": "logo512.png",
+      "src": "dogs2.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "1000x463"
+    },
+    {
+      "src": "dogs3.png",
+      "type": "image/png",
+      "sizes": "1000x463"
+    },
+    {
+      "src": "dogs4.png",
+      "type": "image/png",
+      "sizes": "1000x463"
+    },
+    {
+      "src": "dogs5.png",
+      "type": "image/png",
+      "sizes": "1000x463"
+    },
+    {
+      "src": "dogs6.png",
+      "type": "image/png",
+      "sizes": "1000x463"
+    },
+    {  "src": "donate.jpg",
+      "type": "image/jpg",
+      "sizes": "612x490"
+    },
+    {
+      "src": "thankyou.jpg",
+      "type": "image/jpg",
+      "sizes": "1024x512"
+    },
+    {
+      "src": "paws.jpg",
+      "type": "image/jpg",
+      "sizes": "612x361"
     }
+
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
