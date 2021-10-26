@@ -31,6 +31,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import catCards from "./pages/Cats";
 
 // create the apollo provider
 const httpLink = createHttpLink({
@@ -67,6 +68,7 @@ function App() {
             <Route exact path="/stripe" component={Stripe} />
             <Route exact path="/" component={Homepage} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/cats" component={catCards} />
             <Route exact path="/adoptionForm" component={AdoptionForm} />
             <Route exact path="/login" component={Login} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
