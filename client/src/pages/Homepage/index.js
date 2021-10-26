@@ -6,11 +6,10 @@ import dogs1 from "../../assets/images/dogs1.png";
 import dogs3 from "../../assets/images/dogs3.png";
 import dogs6 from "../../assets/images/dogs6.png";
 
-
-
 function Homepage() {
   <style jsx>{`
   var slideIndex = 1;
+
   showSlides(slideIndex);
   
   function plusSlides(n) {
@@ -41,6 +40,11 @@ function Homepage() {
   return (
     <div class="homepage justify-content-center">
       <h1 class="title">
+
+  return (
+    <div class="homepage justify-content-center">
+      <h1>
+
         Anything is Pawsible if You Just Believe &nbsp;
         <i class="fas fa-paw"></i>
       </h1>
