@@ -68,21 +68,21 @@ function Homepage() {
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-<div class="dotss">
-      <div class="dropdown">
-        <button class="dropbtn">Choose Your Pet</button>
-        <div class="dropdown-content">
-          <a href="#">
-            Cats<i class="fas fa-cat"></i>
-          </a>
-          <a href="#">
-            Dogs<i class="fas fa-dog"></i>
-          </a>
-        </div>
-        </div>
+      </div>
+      <div class="dotss">
+        <div class="dropdown">
+          <button class="dropbtn">Choose Your Pet</button>
+          <div class="dropdown-content">
+            <a href="/cats">
+              Cats<i class="fas fa-cat"></i>
+            </a>
+            <a href="/dogs">
+              Dogs<i class="fas fa-dog"></i>
+            </a>
+          </div>
         </div>
       </div>
+    </div>
 
   );
 }
