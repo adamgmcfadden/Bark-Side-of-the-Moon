@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import "./header.css"
 import React from "react";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
@@ -8,7 +6,6 @@ const Header = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
-=======
 // import all dependencies - React + {useState} and components/pages
 import React, { useState } from "react";
 import Nav from "../Navigation";
@@ -31,7 +28,6 @@ function Header() {
       default:
         return <AdoptionForm />;
     }
->>>>>>> origin
   };
 
   return (
@@ -46,9 +42,6 @@ function Header() {
       {renderPage(currentPage)}
     </div>
   );
-<<<<<<< HEAD
-};
-=======
 // import all dependencies - React + {useState} and components/pages
 import React, { useState } from "react";
 import Nav from "../Navigation";
@@ -88,15 +81,13 @@ function Header() {
   );
 }
 
-// export header function
->>>>>>> feature/adam
-=======
+// export header function=
 }
 
 // export header function
->>>>>>> origin
+
 export default Header;
-=======
+
 // // import all dependencies - React + {useState} and components/pages
 // import React, { useState } from "react";
 // import Nav from "../Navigation";
@@ -137,4 +128,4 @@ export default Header;
 
 // // export header function
 // export default Header;
->>>>>>> 7ca6300af0a57f4e30e85d6d7e1ec9384a01bb6e
+
