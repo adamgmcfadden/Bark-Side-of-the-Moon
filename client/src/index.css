@@ -80,12 +80,8 @@ body {
 
 /* styling for all links */
 .link-style {
-<<<<<<< HEAD
-  color: white;
-=======
   margin: 20px 0 20px 0;
   color: var(--primary);
->>>>>>> feature/adam
   text-decoration: none;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -96,11 +92,7 @@ body {
 }
 /* styling for all links on focus */
 .link-style:focus {
-<<<<<<< HEAD
-  color: rgba(190, 227, 219, 0.2);
-=======
   color: red;
->>>>>>> feature/adam
 }
 
 /* -------------------------------
@@ -691,11 +683,7 @@ h1.dogs {
 /* Dog & Cat Cards */
 img.img-cats,
 img.img-dogs {
-<<<<<<< HEAD
-  margin-top: 50px;
-=======
   margin-top: 20px;
->>>>>>> feature/adam
   width: 45%;
   border-left: 10%;
   border-radius: 15px 15px 0px 0px;
@@ -717,11 +705,7 @@ button.btn-fav {
   background-color: midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
-<<<<<<< HEAD
-  width: 30%;
-=======
   width: 45%;
->>>>>>> feature/adam
   height: auto;
   color: white;
   margin: 20px;
@@ -742,27 +726,6 @@ div.card-text {
   background-color: red;
 }
 
-<<<<<<< HEAD
-.card-subject {
-  color: #9fa5b6;
-}
-
-.text-span {
-  font-size: 25px;
-  font-style: italic;
-  color: white;
-}
-
-.fav-btn-style:hover {
-  background-color: red;
-}
-
-.fav-btn-style:focus {
-  background-color: red;
-}
-footer {
-  margin-left: 10px;
-=======
 .span-style {
   color: white;
   font-style: italic;
@@ -770,7 +733,6 @@ footer {
 }
 
 .footstyle {
->>>>>>> feature/adam
   position: fixed;
   bottom: 0;
   width: 100%;
