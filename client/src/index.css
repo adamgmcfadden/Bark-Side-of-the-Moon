@@ -266,7 +266,6 @@ h1.title {
 }
 .dropdown-content a:hover {background-color:#82b1e6;}
 
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
