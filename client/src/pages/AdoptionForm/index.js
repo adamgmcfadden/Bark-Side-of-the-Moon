@@ -70,7 +70,7 @@ function AdoptionForm() {
   return (
     <section className="container-style">
       <h1 data-testid="h1tag" className="page-title">
-        Contact me
+        Adoption Form
       </h1>
       <form
         id="adoption-form"
@@ -121,7 +121,9 @@ function AdoptionForm() {
           />
         </div>
         <div className="d-flex flex-column">
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">
+            Please tell us why you'd be a good fit for this pet:
+          </label>
           <textarea
             name="message"
             defaultValue={message}
@@ -136,7 +138,7 @@ function AdoptionForm() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="buttontag" type="submit">
+        <button className="form-btn" type="submit">
           Submit
         </button>
       </form>

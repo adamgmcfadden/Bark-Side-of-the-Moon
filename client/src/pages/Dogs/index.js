@@ -15,7 +15,17 @@ const pfClient = new petfinder.Client({ apiKey: api_key, secret: api_secret });
 
 // Array which will query and save a cats array of cats
 async function dogData() {
-  // Use petfinder client to make a query by type
+  // // create state to hold saved petId values
+  // const [savedPetIds, setSavedPetIds] = useState(getSavedPetIds());
+  // // Use petfinder client to make a query by type
+
+  // // define savePet with mutation
+  // const [savePet, { error }] = useMutation(SAVE_PET);
+
+  // useEffect(() => {
+  //   return () => savePetIds(savedPetIds);
+  // });
+
   const res = await pfClient.animal.search({
     type: pageType,
   });
@@ -29,9 +39,9 @@ async function dogData() {
   // Create an Array we will load our cats into
   const dogs = [];
   for (let i = 0; i < 10; i++) {
-
     if (!searchResults[i].primary_photo_cropped) {
       const currentDog = {
+        petId: searchResults[i].id,
         age: searchResults[i].age,
         breed: searchResults[i].breeds.primary,
         description: searchResults[i].description,
@@ -40,9 +50,9 @@ async function dogData() {
         name: searchResults[i].name,
       };
       dogs.push(currentDog);
-
     } else {
       const currentDog = {
+        petId: searchResults[i].id,
         age: searchResults[i].age,
         breed: searchResults[i].breeds.primary,
         description: searchResults[i].description,
@@ -51,7 +61,6 @@ async function dogData() {
         name: searchResults[i].name,
       };
       dogs.push(currentDog);
-
     }
   }
   console.log(dogs);
@@ -68,8 +77,35 @@ const DogCards = () => {
       setDogArray(dogs);
     }
     fetchData();
-
   }, []);
+
+  // // create function to handle saving a pet to our database
+  // const handleSavePet = async (petId) => {
+  //   // find the pet in `cats/dogs` state by the matching id
+  //   const petToSave = dogArray.find((pet) => pet.petId === petId);
+
+  //   // get token
+  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+  //   if (!token) {
+  //     return false;
+  //   }
+
+  //   try {
+  //     const { data } = await savePet({
+  //       variables: { input: petToSave },
+  //     });
+
+  //     if (error) {
+  //       throw new Error("something went wrong!");
+  //     }
+
+  //     // if pet successfully saves to user's account, save pet id to state
+  //     setSavedPetIds([...savedPetIds, petToSave.petId]);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   return (
     <div className="dogscards row justify-content-center">
@@ -87,14 +123,28 @@ const DogCards = () => {
               <br />
 
               <div class="card-text">
-                <h2>{dog.name}</h2>
-                <h3>{dog.description}</h3>
-                <h3>{dog.breed}</h3>
-                <h3>{dog.age}</h3>
-                <a href={dog.link} target="_blank" alt="Link to dogs page">
-                  Link
+                <h3>
+                  Name: <span className="span-style">{dog.name}</span>
+                </h3>
+                <h3>
+                  Description:{" "}
+                  <span className="span-style">{dog.description}</span>
+                </h3>
+                <h3>
+                  Breed: <span className="span-style">{dog.breed}</span>
+                </h3>
+                <h3>
+                  Age Category: <span className="span-style">{dog.age}</span>
+                </h3>
+                <a
+                  className="d-flex flex-column link-style"
+                  href={dog.link}
+                  target="_blank"
+                  alt="Link to dogs page"
+                >
+                  Click here for more info!
                 </a>
-                <button className="btn-fav">
+                <button className="btn-fav fav-btn-style">
                   <i className="fas fa-heart"></i>
                 </button>
               </div>

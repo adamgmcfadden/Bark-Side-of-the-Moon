@@ -65,7 +65,7 @@ function App() {
             <Route exact path="/donations" component={Donations} />
             {/* <Route exact path="/stripe" component={Stripe} /> */}
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/dashboard" component={Dashboard} />
+            {/* <Route exact path="/dashboard" component={Dashboard} /> */}
             <Route exact path="/cats" component={CatCards} />
             <Route exact path="/dogs" component={DogCards} />
             <Route exact path="/adoptionForm" component={AdoptionForm} />
