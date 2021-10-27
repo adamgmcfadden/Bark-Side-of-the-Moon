@@ -232,7 +232,8 @@ h1.title {
   align-items: center;
   width: 100%;
   background-color: #417cc0;
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   color: white;
   font-style: italic;
   font-weight: bold;
@@ -257,25 +258,19 @@ h1.title {
 }
 
 .dropdown-content a {
-  background-color: #45a195;
-
-  color: white;
+  background-color:#417cc0;
+  color:white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+.dropdown-content a:hover {background-color:#82b1e6;}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #61e0cf;
-}
+.dropdown:hover .dropbtn {background-color: #82b1e6;}
 
 /* Pet Slides */
 
@@ -618,6 +613,13 @@ button.donate-btn {
   margin-bottom: 30px;
   padding: 15px 20px;
 }
+button.donate-btn:hover {
+  background-color: rgb(51, 162, 182);
+  color: white;
+  border-radius: 15px;
+}
+
+
 label {
   color: midnightblue;
   font-weight: bolder;

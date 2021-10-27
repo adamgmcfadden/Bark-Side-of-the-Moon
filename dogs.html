@@ -4,67 +4,55 @@
     <title>tester</title>
     <style>
      
-      h1.cats {
-        color: midnightblue;
-        font-size: 40px;
-        font-weight: bolder;
-        text-align: center;
-        width: 100%;
-      }
-
-      img.img-cats {
-        width: 100%;
-        border-left: 10%;
-        border-radius: 15px 15px 0px 0px;
-      }
+     
       
+     button.donate-btn {
 
-      button.btn-fav {
-        background-color: rgb(51, 162, 182);
-        opacity: .8;
-        border-radius: 50%;
-        color: white;
-        font-size: 10px;
-        margin-bottom: 50px;
-        padding: 15px 20px;
-      }
-      
-      .cats-cards {
-        border-radius: 15px;
-        background-color:midnightblue;
-  box-shadow: 0 0 20px rgb(0, 0, 0);
-  text-align: center;
-  width: 280px;
-  height: 390px;
+background-color: midnightblue;
+border-radius: 15px;
+color: white;
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 30px;
+padding: 15px 20px;
+}
+button.donate-btn:hover {
+  background-color: rgb(51, 162, 182);
   color: white;
-margin: 20px;
-      }
-      div.card-text {
-       margin-top: -5px ;
-       text-align: center;
-        font-size: 12px;
-      }
+  border-radius: 15px;
+}
+      
+      
     </style>
   </head>
   <body>
     
-    <div className="catscards row justify-content-center"> 
-    <h1 class="cats">Cats</h1>
-    <div class="cats-cards">
-        <!-- <img class="img-cats" src={process.env.PUBLIC_URL + cats.image} alt="Cats Profiles" /> -->
-        <img class="img-cats" src="client/src/assets/images/GettyImages-588935825.jpg" alt="Cats Profiles" />
-        
-       
-        <br/>
-        <div class="card-text">
-          <h2>{cats.name}</h2>
-          <h3>{cats.description}</h3>
-          <h3>{cats.breed}</h3>
-          <h3>{cats.age}</h3>
-          <a href={cats.link} target="_blank" alt="Link to cats page">
-            <button class="btn-fav"><i class="fas fa-heart"></i><3</button>
-    </div>
-    
-    </div>
+    <section class="pre-set-donations">
+      <button class="donate-btn"
+        data-checkout-mode="payment"
+        data-price-id="sku_GU4JYXyvvRb2sX"
+      >
+        $5.00
+      </button>
+      <button class="donate-btn"
+        data-checkout-mode="payment"
+        data-price-id="sku_GU4KO8nfdg8G2Z"
+      >
+        $15.00
+      </button>
+      <button class="donate-btn"
+        data-checkout-mode="payment"
+        data-price-id="sku_GU4KO8nfdg8G2Z"
+      >
+        $25.00
+      </button>
+      <button class="donate-btn"
+        data-checkout-mode="payment"
+        data-price-id="sku_GU4LB0wBViiYsm"
+      >
+        $50.00
+      </button>
+    </section>
+
   </body>
 </html>

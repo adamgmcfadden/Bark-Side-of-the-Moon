@@ -3,6 +3,7 @@
 import React from "react";
 const petfinder = require("@petfinder/petfinder-js"); // Petfinder
 
+
 // Globals
 const api_key = "iEi7zznBCnZgykZhogUiQVMBVvCszCqyWb3C96dCLAeRnVySXK"; // Petfinder Key
 const api_secret = "0DWQGue3dl1r1CBvs9NmT31IzKKMcNqTqPCYfpPl"; // Petfiner Secret
@@ -73,25 +74,63 @@ function catCards() {
               alt="Cats Profiles"
             />
 
-            <br />
-            <div className="card-text">
-              <h2>{cats.name}</h2>
-              <h3>{cats.description}</h3>
-              <h3>{cats.breed}</h3>
-              <h3>{cats.age}</h3>
-              <a href={cats.link} target="_blank" alt="Link to cats page">
-                {" "}
-                Link
-              </a>
-              <button className="btn-fav">
-                <i className="fas fa-heart"></i>
-              </button>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+                //console.log(searchResults);
+
+                // Create an Array we will load our cats into
+                const cats = [];
+                for (let i = 0; i < searchResults.length; i++) {
+                    if (!searchResults[i].primary_photo_cropped) {
+                        let currentCat =
+                        {
+                            name: searchResults[i].name,
+                            description: searchResults[i].description,
+                            breed: searchResults[i].breeds.primary,
+                            age: searchResults[i].age,
+                            link: searchResults[i].url,
+                            image: fillerIMG
+                        };
+                        newCatData.push(currentCat);
+                    } else {
+                        let currentCat =
+                        {
+                            name: searchResults[i].name,
+                            description: searchResults[i].description,
+                            breed: searchResults[i].breeds.primary,
+                            age: searchResults[i].age,
+                            link: searchResults[i].url,
+                            image: searchResults[i].primary_photo_cropped.small
+                        };
+                        newCatData.push(currentCat);
+                    }
+                }
+                return cats;
+            })
+    }
+    catData();
+    console.log(newCatData);
+    return (
+        <div className="catscards row justify-content-center" >
+            <h1 class="cats">Cats</h1>
+            {newCatData.map((cats) => {
+                return (
+                    <div class="cats-cards">
+                        <img class="img-cats" src={process.env + cats.image} alt="Cats Profiles" />
+
+                        <br />
+                        <div class="card-text">
+                            <h2>{cats.name}</h2>
+                            <h3>{cats.description}</h3>
+                            <h3>{cats.breed}</h3>
+                            <h3>{cats.age}</h3>
+                            <a href={cats.link} target="_blank" alt="Link to cats page"> Link</a>
+                            <button class="btn-fav"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    );
+
 }
 
 export default catCards;
