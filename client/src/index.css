@@ -25,15 +25,15 @@ body {
   height: 100%;
 }
 /* fadein header welcome text stylying*/
-.header1 {
+.topmessage {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-size: 16px;
   text-align: center;
   color: black;
-  animation: fadeIn linear 15s;
-  animation-iteration-count: infinite;
-  opacity: 0;
+  animation: fadeIn linear 6s;
+  animation-iteration-count: 1;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -80,7 +80,12 @@ body {
 
 /* styling for all links */
 .link-style {
+<<<<<<< HEAD
   color: white;
+=======
+  margin: 20px 0 20px 0;
+  color: var(--primary);
+>>>>>>> feature/adam
   text-decoration: none;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -91,7 +96,11 @@ body {
 }
 /* styling for all links on focus */
 .link-style:focus {
+<<<<<<< HEAD
   color: rgba(190, 227, 219, 0.2);
+=======
+  color: red;
+>>>>>>> feature/adam
 }
 
 /* -------------------------------
@@ -246,7 +255,7 @@ h1.title {
 }
 
 .dropdown {
-  margin-top: 80px;
+  margin-top: 10px;
   position: relative;
   display: inline-block;
 }
@@ -298,10 +307,12 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 800px;
-  position: relative;
+  max-width: 1000px;
   margin: auto;
   display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  justify-content: center;
 }
 .dotss {
   display: flex;
@@ -321,13 +332,11 @@ img {
   font-style: italic;
   font-size: 20px;
   padding: 8px 12px;
-  position: absolute;
   bottom: 8px;
-  width: 100%;
   text-align: left;
 
   animation: float linear 7s;
-  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
   opacity: 0;
 }
 @keyframes float {
@@ -363,28 +372,36 @@ img {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 6s;
+  /*-webkit-animation-name: fade;
+  -webkit-animation-duration: 6s; */
   animation-name: fade;
-  animation-duration: 10s;
+  animation-duration: 6666s;
 }
 
-@-webkit-keyframes fade {
+/* @-webkit-keyframes fade {
   from {
     opacity: 0.4;
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 @keyframes fade {
-  from {
+  0% {
     opacity: 0.4;
   }
-  to {
+  0.1% {
     opacity: 1;
   }
+  100% {
+    opacity: 2;
+  }
+}
+
+/* not to fade off */
+.fade:not(.show) {
+  opacity: 1;
 }
 
 /* On smaller screens, decrease text size */
@@ -674,7 +691,11 @@ h1.dogs {
 /* Dog & Cat Cards */
 img.img-cats,
 img.img-dogs {
+<<<<<<< HEAD
   margin-top: 50px;
+=======
+  margin-top: 20px;
+>>>>>>> feature/adam
   width: 45%;
   border-left: 10%;
   border-radius: 15px 15px 0px 0px;
@@ -696,7 +717,11 @@ button.btn-fav {
   background-color: midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
+<<<<<<< HEAD
   width: 30%;
+=======
+  width: 45%;
+>>>>>>> feature/adam
   height: auto;
   color: white;
   margin: 20px;
@@ -706,8 +731,18 @@ div.card-text {
   width: 80%;
   text-align: center;
   font-size: 12px;
+  color: #555b6e;
 }
 
+.fav-btn-style:hover {
+  background-color: red;
+}
+
+.fav-btn-style:focus {
+  background-color: red;
+}
+
+<<<<<<< HEAD
 .card-subject {
   color: #9fa5b6;
 }
@@ -727,8 +762,20 @@ div.card-text {
 }
 footer {
   margin-left: 10px;
+=======
+.span-style {
+  color: white;
+  font-style: italic;
+  font-size: 25px;
+}
+
+.footstyle {
+>>>>>>> feature/adam
   position: fixed;
-  padding-top: 10px;
   bottom: 0;
   width: 100%;
+  text-align: center;
+  background: black;
+  padding: 1px;
+  color: var(--tertiary);
 }

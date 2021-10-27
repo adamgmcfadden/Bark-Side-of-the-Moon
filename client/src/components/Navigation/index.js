@@ -25,7 +25,7 @@ const AppNavbar = () => {
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/dashboard">
+                  <Nav.Link as={Link} to="/">
                     Dashboard
                   </Nav.Link>
                   <Nav.Link as={Link} to="/adoptionForm">
@@ -80,7 +80,7 @@ const AppNavbar = () => {
         </Tab.Container>
       </Modal>
       <Footer />
-      <div className="header1">
+      <div className="topmessage">
         {" "}
         🐾 Welcome to the Bark Side of the Moon, Where you find the cutest pets
         on the planet🐾
