@@ -8,22 +8,30 @@
 
 _A single-page application that allows a user to search and find the pet they might fall inlove with, Uses API with Apollo server to search pets. This app was built with a MERN stack._
 
+#### Languages Used: 
+
+![Language](https://img.shields.io/badge/HTML-green.svg "Language Badge")
+![Language](https://img.shields.io/badge/CSS-blue.svg "Language Badge")
+![Language](https://img.shields.io/badge/JavaScript-red.svg "Language Badge")
+
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+[Installation](#installation)
+[Usage](#usage)
+[Credits](#credits)
+[License](#license)
+[Questions](#questions)
 
 ## Installation
 
-Clone repo, npm install
+To install on your station, clone the app to your local git repository, and run `npm install` from root of the app. 
 
 ## Usage
 
-npm start
+Once dependencies are installed, you can run the app locally from the root directory by running `npm start` in the CLI.
 
 **Screenshot**
+
 ![](./client/src/assets/images/sc-bark-side-of-moon.png)
 
 Deployed link: https://cryptic-hollows-09419.herokuapp.com/
@@ -36,10 +44,6 @@ Deployed link: https://cryptic-hollows-09419.herokuapp.com/
 
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.<br />
 Copyright © 2021 [Bark-Side-of-the-Moon](https://github.com/adamgmcfadden/Bark-Side-of-the-Moon)
-
-## Tests
-
-N/A
 
 ## Questions
 
