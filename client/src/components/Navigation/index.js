@@ -25,9 +25,9 @@ const AppNavbar = () => {
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/">
+                  {/* <Nav.Link as={Link} to="/">
                     Dashboard
-                  </Nav.Link>
+                  </Nav.Link> */}
                   <Nav.Link as={Link} to="/adoptionForm">
                     Adoption Form
                   </Nav.Link>
