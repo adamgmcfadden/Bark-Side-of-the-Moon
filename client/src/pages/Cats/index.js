@@ -79,7 +79,6 @@ function catCards() {
               <h3>{cats.breed}</h3>
               <h3>{cats.age}</h3>
               <a href={cats.link} target="_blank" alt="Link to cats page">
-                {" "}
                 Link
               </a>
               <button class="btn-fav">
