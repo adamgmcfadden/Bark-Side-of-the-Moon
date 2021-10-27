@@ -34,7 +34,7 @@ export const SAVE_PET = gql`
       _id
       username
       email
-      bookCount
+      petCount
       savedPet {
         petId
         name

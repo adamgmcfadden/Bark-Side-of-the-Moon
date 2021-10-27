@@ -73,7 +73,6 @@ const CatCards = () => {
       setCatArray(cats);
     }
     fetchData();
-  
   }, []);
 
   return (
@@ -92,12 +91,26 @@ const CatCards = () => {
               <br />
 
               <div class="card-text">
-                <h2>{cat.name}</h2>
-                <h3>{cat.description}</h3>
-                <h3>{cat.breed}</h3>
-                <h3>{cat.age}</h3>
-                <a href={cat.link} target="_blank" alt="Link to cats page">
-                  Link
+                <h3 className="card-subject">
+                  Name: <span className="text-span">{cat.name}</span>
+                </h3>
+                <h3 className="card-subject">
+                  Description:{" "}
+                  <span className="text-span">{cat.description}</span>
+                </h3>
+                <h3 className="card-subject">
+                  Breed: <span className="text-span">{cat.breed}</span>
+                </h3>
+                <h3 className="card-subject">
+                  Status: <span className="text-span">{cat.age}</span>
+                </h3>
+                <a
+                  className="d-flex flex-column link-style"
+                  href={cat.link}
+                  target="_blank"
+                  alt="Link to cats page"
+                >
+                  Click for more info!
                 </a>
                 <button className="btn-fav">
                   <i className="fas fa-heart"></i>

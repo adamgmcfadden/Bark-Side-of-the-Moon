@@ -80,16 +80,18 @@ body {
 
 /* styling for all links */
 .link-style {
-  color: var(--primary);
+  color: white;
   text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /* styling for all links on hover */
 .link-style:hover {
-  color: var(--tertiary);
+  color: red;
 }
 /* styling for all links on focus */
 .link-style:focus {
-  color: var(--linkfocus);
+  color: rgba(190, 227, 219, 0.2);
 }
 
 /* -------------------------------
@@ -660,7 +662,8 @@ img.img-thanks {
   border: 20px solid midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
-h1.cats {
+h1.cats,
+h1.dogs {
   color: midnightblue;
   font-size: 40px;
   font-weight: bolder;
@@ -669,8 +672,10 @@ h1.cats {
 }
 
 /* Dog & Cat Cards */
-img.img-cats {
-  width: 100%;
+img.img-cats,
+img.img-dogs {
+  margin-top: 50px;
+  width: 45%;
   border-left: 10%;
   border-radius: 15px 15px 0px 0px;
 }
@@ -685,22 +690,41 @@ button.btn-fav {
   padding: 15px 20px;
 }
 
-.cats-cards {
+.cats-cards,
+.dogs-cards {
   border-radius: 15px;
   background-color: midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
-  width: 280px;
-  height: 390px;
+  width: 30%;
+  height: auto;
   color: white;
   margin: 20px;
 }
 div.card-text {
-  margin-top: -5px;
+  margin: 20px auto;
+  width: 80%;
   text-align: center;
   font-size: 12px;
 }
 
+.card-subject {
+  color: #9fa5b6;
+}
+
+.text-span {
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+}
+
+.fav-btn-style:hover {
+  background-color: red;
+}
+
+.fav-btn-style:focus {
+  background-color: red;
+}
 footer {
   margin-left: 10px;
   position: fixed;
