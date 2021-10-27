@@ -80,16 +80,17 @@ body {
 
 /* styling for all links */
 .link-style {
+  margin: 20px 0 20px 0;
   color: var(--primary);
   text-decoration: none;
 }
 /* styling for all links on hover */
 .link-style:hover {
-  color: var(--tertiary);
+  color: red;
 }
 /* styling for all links on focus */
 .link-style:focus {
-  color: var(--linkfocus);
+  color: red;
 }
 
 /* -------------------------------
@@ -668,7 +669,8 @@ img.img-thanks {
   border: 20px solid midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
-h1.cats {
+h1.cats,
+h1.dogs {
   color: midnightblue;
   font-size: 40px;
   font-weight: bolder;
@@ -677,8 +679,10 @@ h1.cats {
 }
 
 /* Dog & Cat Cards */
-img.img-cats {
-  width: 100%;
+img.img-cats,
+img.img-dogs {
+  margin-top: 20px;
+  width: 45%;
   border-left: 10%;
   border-radius: 15px 15px 0px 0px;
 }
@@ -693,20 +697,37 @@ button.btn-fav {
   padding: 15px 20px;
 }
 
-.cats-cards {
+.cats-cards,
+.dogs-cards {
   border-radius: 15px;
   background-color: midnightblue;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   text-align: center;
-  width: 280px;
-  height: 390px;
+  width: 45%;
+  height: auto;
   color: white;
   margin: 20px;
 }
 div.card-text {
-  margin-top: -5px;
+  margin: 20px auto;
+  width: 80%;
   text-align: center;
   font-size: 12px;
+  color: #555b6e;
+}
+
+.fav-btn-style:hover {
+  background-color: red;
+}
+
+.fav-btn-style:focus {
+  background-color: red;
+}
+
+.span-style {
+  color: white;
+  font-style: italic;
+  font-size: 25px;
 }
 
 .footstyle {

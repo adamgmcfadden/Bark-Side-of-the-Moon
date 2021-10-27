@@ -29,7 +29,6 @@ async function dogData() {
   // Create an Array we will load our cats into
   const dogs = [];
   for (let i = 0; i < 10; i++) {
-
     if (!searchResults[i].primary_photo_cropped) {
       const currentDog = {
         age: searchResults[i].age,
@@ -40,7 +39,6 @@ async function dogData() {
         name: searchResults[i].name,
       };
       dogs.push(currentDog);
-
     } else {
       const currentDog = {
         age: searchResults[i].age,
@@ -51,7 +49,6 @@ async function dogData() {
         name: searchResults[i].name,
       };
       dogs.push(currentDog);
-
     }
   }
   console.log(dogs);
@@ -68,7 +65,6 @@ const DogCards = () => {
       setDogArray(dogs);
     }
     fetchData();
-
   }, []);
 
   return (
@@ -87,14 +83,28 @@ const DogCards = () => {
               <br />
 
               <div class="card-text">
-                <h2>{dog.name}</h2>
-                <h3>{dog.description}</h3>
-                <h3>{dog.breed}</h3>
-                <h3>{dog.age}</h3>
-                <a href={dog.link} target="_blank" alt="Link to dogs page">
-                  Link
+                <h3>
+                  Name: <span className="span-style">{dog.name}</span>
+                </h3>
+                <h3>
+                  Description:{" "}
+                  <span className="span-style">{dog.description}</span>
+                </h3>
+                <h3>
+                  Breed: <span className="span-style">{dog.breed}</span>
+                </h3>
+                <h3>
+                  Age Category: <span className="span-style">{dog.age}</span>
+                </h3>
+                <a
+                  className="d-flex flex-column link-style"
+                  href={dog.link}
+                  target="_blank"
+                  alt="Link to dogs page"
+                >
+                  Click here for more info!
                 </a>
-                <button className="btn-fav">
+                <button className="btn-fav fav-btn-style">
                   <i className="fas fa-heart"></i>
                 </button>
               </div>
