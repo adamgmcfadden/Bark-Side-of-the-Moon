@@ -5,7 +5,7 @@
   ![GitHub top language](https://img.shields.io/github/languages/top/adamgmcfadden/Bark-Side-of-the-Moon)
   
   ## Description
-  _A single-page application that allows a user to search and find the pet they might fall inlove with, Uses API with Apollo server to search pets. The app was built with the MERN stack._
+  _A single-page application that allows a user to search and find the pet they might fall inlove with, Uses API with Apollo server to search pets. This app was built with a MERN stack._
   
   ## Table of Contents
   * [Installation](#installation)
