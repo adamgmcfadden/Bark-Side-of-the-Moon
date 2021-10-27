@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div>BARK-SIDE-OF-THE-MOON ❤️ &copy; 2021</div>
+      <div>BARK-SIDE-OF-THE-MOON 🐕‍🦺 &copy; 2021</div>
     </footer>
   );
 };

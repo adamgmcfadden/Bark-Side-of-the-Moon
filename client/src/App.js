@@ -5,9 +5,9 @@ import Dashboard from "./pages/Dashboard";
 import AdoptionForm from "./pages/AdoptionForm";
 import Login from "./pages/Login";
 import AppNavbar from "./components/Navigation";
-// import Donations from "./components/Donations";
+import Donations from "./components/Donations";
 import { StoreProvider } from "./utils/GlobalState";
-// import Stripe from "./components/Stripe";
+import Stripe from "./components/Stripe";
 
 // function App() {
 //   return (
@@ -28,7 +28,8 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import catCards from "./pages/Cats";
+import CatCards from "./pages/Cats";
+import DogCards from "./pages/Dogs";
 
 // create the apollo provider
 const httpLink = createHttpLink({
@@ -61,11 +62,12 @@ function App() {
         <>
           <AppNavbar />
           <Switch>
-            {/* <Route exact path="/donations" component={Donations} /> */}
+            <Route exact path="/donations" component={Donations} />
             {/* <Route exact path="/stripe" component={Stripe} /> */}
             <Route exact path="/" component={Homepage} />
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/cats" component={catCards} />
+            <Route exact path="/cats" component={CatCards} />
+            <Route exact path="/dogs" component={DogCards} />
             <Route exact path="/adoptionForm" component={AdoptionForm} />
             <Route exact path="/login" component={Login} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
