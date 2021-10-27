@@ -2,7 +2,7 @@
 
 ## Project Description
 
-_A single-page application that allows a user to search and find the pet they might fall inlove with, Uses API with Apollo server to search pets. The app was built with the MERN stack._
+_A single-page application that allow users to search and find pets that are in desperate need of a good home, Uses API with Apollo server to search for pets in need of home. The app was built with the MERN stack._
 
 ### Languages used:
 
