@@ -107,20 +107,31 @@ const Donations = () => {
         <button onClick={handleSubmit} class="donate-btn">
           Donate
         </button>
-        <section class="pre-set-donations">
+
+        <section  onClick={redirectToCheckout}  class="pre-set-donations">
           <button
+            class="donate-btn"
             data-checkout-mode="payment"
             data-price-id="sku_GU4JYXyvvRb2sX"
           >
             $5.00
           </button>
           <button
+            class="donate-btn"
             data-checkout-mode="payment"
             data-price-id="sku_GU4KO8nfdg8G2Z"
           >
             $15.00
           </button>
           <button
+            class="donate-btn"
+            data-checkout-mode="payment"
+            data-price-id="sku_GU4KO8nfdg8G2Z"
+          >
+            $25.00
+          </button>
+          <button
+            class="donate-btn"
             data-checkout-mode="payment"
             data-price-id="sku_GU4LB0wBViiYsm"
           >

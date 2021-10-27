@@ -6,8 +6,9 @@ const { ApolloServer } = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
 // import db config
 const db = require("./config/connection");
-// import authmiddleware - copied from module
+
 const { authMiddleware } = require("./utils/auth");
+const path = require("path");
 
 // port - process.ENV or 3001
 const PORT = process.env.PORT || 3001;
@@ -30,6 +31,15 @@ const startServer = async () => {
   // log where we can go to test our GQL API
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
+
+// Serve up static assets
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 // Initialize the Apollo server
 startServer();

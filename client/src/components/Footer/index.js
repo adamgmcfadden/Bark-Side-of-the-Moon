@@ -1,8 +1,8 @@
 // footer code here
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div>BARK-SIDE-OF-THE-MOON ❤️ &copy;</div>
+    <footer>
+      <div>BARK-SIDE-OF-THE-MOON ❤️ &copy; 2021</div>
     </footer>
   );
 };
