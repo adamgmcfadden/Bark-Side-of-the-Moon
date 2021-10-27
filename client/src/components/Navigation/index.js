@@ -80,7 +80,7 @@ const AppNavbar = () => {
         </Tab.Container>
       </Modal>
       <Footer />
-      <div className="header1">
+      <div className="topmessage">
         {" "}
         🐾 Welcome to the Bark Side of the Moon, Where you find the cutest pets
         on the planet🐾
