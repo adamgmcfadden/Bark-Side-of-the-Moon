@@ -9,8 +9,7 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
 
-export default function PreviewPage() {
-  const [state, dispatch] = useStoreContext();
+export default function PreviewPage({firstname, lastname, email, donation}) {
 
   React.useEffect(() => {
     // Check to see if this is a redirect back from Checkout
@@ -30,7 +29,10 @@ export default function PreviewPage() {
   return (
     <form action="/api/checkout_sessions" method="POST">
       <section>
-        <h2> ${state.donation}</h2>
+      <h2> {firstname} &nbsp; {lastname}</h2>
+      <h2> {email}</h2>
+        <h2> ${donation}</h2>
+    
         <button type="submit" role="link">
           Checkout
         </button>
