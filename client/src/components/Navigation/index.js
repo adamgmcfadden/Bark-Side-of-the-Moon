@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
 import Signup from "../../pages/Signup";
 import Login from "../../pages/Login";
+// import Donations from "../../pages/Donations";
 
 import Auth from "../../utils/auth";
 
@@ -28,6 +29,9 @@ const AppNavbar = () => {
                   </Nav.Link>
                   <Nav.Link as={Link} to="/adoptionForm">
                     Adoption Form
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/donations">
+                    Donations
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>

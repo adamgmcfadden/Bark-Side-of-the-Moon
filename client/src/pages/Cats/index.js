@@ -3,6 +3,7 @@
 import React from 'react';
 const petfinder = require("@petfinder/petfinder-js");   // Petfinder
 
+
 // Globals
 const api_key = 'iEi7zznBCnZgykZhogUiQVMBVvCszCqyWb3C96dCLAeRnVySXK';   // Petfinder Key
 const api_secret = '0DWQGue3dl1r1CBvs9NmT31IzKKMcNqTqPCYfpPl';  // Petfiner Secret
@@ -70,7 +71,7 @@ function catCards() {
             {newCatData.map((cats) => {
                 return (
                     <div class="cats-cards">
-                        <img class="img-cats" src={process.env.PUBLIC_URL + cats.image} alt="Cats Profiles" />
+                        <img class="img-cats" src={process.env + cats.image} alt="Cats Profiles" />
 
                         <br />
                         <div class="card-text">

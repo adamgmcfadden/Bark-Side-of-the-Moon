@@ -6,6 +6,8 @@ import dogs1 from "../../assets/images/dogs1.png";
 import dogs3 from "../../assets/images/dogs3.png";
 import dogs6 from "../../assets/images/dogs6.png";
 
+import { FaCat } from "react-icons/fa";
+import { FaDog } from "react-icons/fa";
 
 
 function Homepage() {
@@ -74,10 +76,11 @@ function Homepage() {
           <button class="dropbtn">Choose Your Pet</button>
           <div class="dropdown-content">
             <a href="/cats">
-              Cats<i class="fas fa-cat"></i>
+              <FaCat/>  &nbsp;  Cats
+        
             </a>
             <a href="/dogs">
-              Dogs<i class="fas fa-dog"></i>
+         <FaDog /> &nbsp;  Dogs 
             </a>
           </div>
         </div>
