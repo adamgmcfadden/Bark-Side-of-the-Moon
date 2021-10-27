@@ -37,9 +37,9 @@ function Homepage() {
       <br />
       <div className="dotss">
         {/* <div style={{text-align :center}}> */}
-        <span className="dot" onClick="currentSlide(1)"></span>
+        {/* <span className="dot" onClick="currentSlide(1)"></span>
         <span className="dot" onClick="currentSlide(2)"></span>
-        <span className="dot" onClick="currentSlide(3)"></span>
+        <span className="dot" onClick="currentSlide(3)"></span> */}
       </div>
 
       <div className="dotss">
