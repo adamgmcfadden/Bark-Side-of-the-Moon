@@ -10,11 +10,11 @@ _A single-page application that allows a user to search and find the pet they mi
 
 ## Table of Contents
 
-[Installation](#installation)
-[Usage](#usage)
-[Credits](#credits)
-[License](#license)
-[Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Questions](#questions)
 
 ## Installation
 
