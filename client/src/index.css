@@ -140,6 +140,10 @@ nav a {
   background-color: var(--primary);
   color: var(--dark);
 }
+/* login/signup moved to the right */
+div#navbar {
+  justify-content: flex-end;
+}
 
 /* nav anchor styling on hover */
 nav a:hover {
@@ -211,9 +215,6 @@ button:focus {
 }
 
 /* Homepage */
-div#navbar {
-  justify-content: flex-end;
-}
 
 .homepage {
   justify-content: center;
