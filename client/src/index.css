@@ -688,7 +688,7 @@ img.img-dogs {
   margin-top: 20px;
   width: 45%;
   border-left: 10%;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 50%;
 }
 
 button.btn-fav {
