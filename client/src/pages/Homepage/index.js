@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import dogs1 from "../../assets/images/dogs1.png";
 import dogs3 from "../../assets/images/dogs3.png";
 import dogs6 from "../../assets/images/dogs6.png";
+import { FaCat } from "react-icons/fa";
+import { FaDog } from "react-icons/fa";
 
 function Homepage() {
   <style jsx>{`
@@ -71,10 +73,12 @@ function Homepage() {
           <button className="dropbtn">Choose Your Pet</button>
           <div className="dropdown-content">
             <a href="/cats">
-              Cats<i className="fas fa-cat"></i>
+              <FaCat/>  &nbsp;  Cats
+        
             </a>
             <a href="/dogs">
-              Dogs<i className="fas fa-dog"></i>
+         <FaDog /> &nbsp;  Dogs 
+
             </a>
           </div>
         </div>
