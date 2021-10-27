@@ -8,35 +8,36 @@ import { FaCat } from "react-icons/fa";
 import { FaDog } from "react-icons/fa";
 
 function Homepage() {
-  <style jsx>{`
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("petSlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-  `}</style>;
+  // var slideIndex = 1;
+  // showSlides(slideIndex);
 
+  // function plusSlides(n) {
+  //   showSlides((slideIndex += n));
+  // }
+
+  // function currentSlide(n) {
+  //   showSlides((slideIndex = n));
+  // }
+
+  // function showSlides(n) {
+  //   var i;
+  //   var slides = document.getElementsByClassName("petSlides");
+  //   var dots = document.getElementsByClassName("dot");
+  //   if (n > slides.length) {
+  //     slideIndex = 1;
+  //   }
+  //   if (n < 1) {
+  //     slideIndex = slides.length;
+  //   }
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //   slides[slideIndex - 1].style.display = "block";
+  //   dots[slideIndex - 1].className += " active";
+  // }
   return (
     <div className="homepage justify-content-center">
       <h1 className="title">
@@ -64,21 +65,19 @@ function Homepage() {
       <br />
       <div className="dotss">
         {/* <div style={{text-align :center}}> */}
-        <span className="dot" onClick={"currentSlide(1)"}></span>
-        <span className="dot" onClick={"currentSlide(2)"}></span>
-        <span className="dot" onClick={"currentSlide(3)"}></span>
+        <span className="dot" onClick="currentSlide(1)"></span>
+        <span className="dot" onClick="currentSlide(2)"></span>
+        <span className="dot" onClick="currentSlide(3)"></span>
       </div>
       <div className="dotss">
         <div className="dropdown">
           <button className="dropbtn">Choose Your Pet</button>
           <div className="dropdown-content">
             <a href="/cats">
-              <FaCat/>  &nbsp;  Cats
-        
+              <FaCat /> &nbsp; Cats
             </a>
             <a href="/dogs">
-         <FaDog /> &nbsp;  Dogs 
-
+              <FaDog /> &nbsp; Dogs
             </a>
           </div>
         </div>
