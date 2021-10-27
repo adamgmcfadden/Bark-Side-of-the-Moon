@@ -5,10 +5,9 @@ import Dashboard from "./pages/Dashboard";
 import AdoptionForm from "./pages/AdoptionForm";
 import Login from "./pages/Login";
 import AppNavbar from "./components/Navigation";
-import Footer from "./components/Footer";
-// import Donations from "./components/Donations";
+import Donations from "./components/Donations";
 import { StoreProvider } from "./utils/GlobalState";
-// import Stripe from "./components/Stripe";
+import Stripe from "./components/Stripe";
 
 // function App() {
 //   return (
@@ -62,7 +61,7 @@ function App() {
         <>
           <AppNavbar />
           <Switch>
-            {/* <Route exact path="/donations" component={Donations} /> */}
+            <Route exact path="/donations" component={Donations} />
             {/* <Route exact path="/stripe" component={Stripe} /> */}
             <Route exact path="/" component={Homepage} />
             <Route exact path="/dashboard" component={Dashboard} />

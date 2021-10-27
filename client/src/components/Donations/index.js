@@ -6,13 +6,15 @@ import { useState } from "react";
 import { ADD_TO_DONATION } from "../../utils/actions";
 import { useStoreContext } from "../../utils/GlobalState";
 import donationimage from "../../assets/images/donate.jpg";
+// import Stripe from "../Stripe";
+import Checkout from "react-stripe-checkout";
 
 const stripePromise = loadStripe(
-  "pk_test_51JoExyI4YZmdG6GEo3MDLTpbKn07zGwztg4qTwI3kS3RZ41NW6gkUmTqVKkjVmB3Z1DZB5B0TtgkUfquTkHicdPD00einhfUlN"
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
 
 const Donations = () => {
-  const [state, dispatch] = useStoreContext();
+
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
@@ -23,14 +25,15 @@ const Donations = () => {
     }
   }, [data]);
 
+   const [firstname, setFirstname] = useState("")
+   const [lastname, setLastname] = useState("")
+   const [email, setEmail] = useState("")
   const [donation, setDonation] = useState(0);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    setDonation(e.target.value);
-  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,27 +41,19 @@ const Donations = () => {
     setError(false);
     setSuccess(false);
     console.log(donation);
-    dispatch({ type: ADD_TO_DONATION, donation: donation });
-
-    // try {
-    //   const stripe = await stripePromise;
-    //   const { error } = await stripe.redirectToCheckout({
-    //     // items: [{ sku: "sku_H9jgxm7mz2e0n9", quantity: 1 }],
-    //     successUrl: "http://localhost:3000/success",
-    //     cancelUrl: "http://localhost:3000/cancel",
-    //   });
-    //   if (error) {
-    //     setError(error);
-    //     setLoading(false);
-    //   }
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    
   };
 
   return (
     <div class="donations">
-      <h1 class="donate">Donate Now</h1>
+      { loading ? < Checkout stripeKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY} name={`${firstname} ${lastname}`}email={email} >
+       <h1> {firstname} {lastname} </h1>
+        <h1> {email} </h1>
+        <button className="btn btn-primary"> Pay ${donation} with Card </button>
+        
+      </Checkout> :
+     <>
+     <h1 class="donate">Donate Now</h1>
       <img class="img-donate" src={donationimage} alt="Kitten and Puppy" />
       <br />
       <br />
@@ -70,6 +65,8 @@ const Donations = () => {
             className="form-control"
             id="firstname"
             placeholder="Enter First Name"
+            onChange={(e) => setFirstname(e.target.value)}
+            value={firstname}
           />
           <br />
           <br />
@@ -79,6 +76,8 @@ const Donations = () => {
             className="form-control"
             id="lastname"
             placeholder="Enter Last Name"
+            onChange={(e) => setLastname(e.target.value)}
+            value={lastname}
           />
 
           <br />
@@ -89,6 +88,9 @@ const Donations = () => {
             className="form-control"
             id="email"
             placeholder="Enter Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+      
           />
           <br />
           <br />
@@ -98,7 +100,7 @@ const Donations = () => {
             className="form-control"
             id="donation"
             placeholder="Enter Donation"
-            onChange={handleChange}
+            onChange={(e) => setDonation(e.target.value)}
             value={donation}
           />
         </div>
@@ -108,7 +110,7 @@ const Donations = () => {
           Donate
         </button>
 
-        <section  onClick={redirectToCheckout}  class="pre-set-donations">
+        {/* <section  onClick={redirectToCheckout}  class="pre-set-donations">
           <button
             class="donate-btn"
             data-checkout-mode="payment"
@@ -137,8 +139,9 @@ const Donations = () => {
           >
             $50.00
           </button>
-        </section>
-      </form>
+        </section> */}
+      </form> </>
+      }
     </div>
   );
 };
