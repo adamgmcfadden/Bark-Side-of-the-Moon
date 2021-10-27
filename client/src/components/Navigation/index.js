@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
 import Signup from "../../pages/Signup";
 import Login from "../../pages/Login";
+// import Donations from "../../pages/Donations";
 
 import Auth from "../../utils/auth";
 
@@ -12,9 +13,14 @@ const AppNavbar = () => {
 
   return (
     <>
+      <div class="header1">
+        {" "}
+        🐾 Welcome to the Bark Side of the Moon, Where you find the most cutest
+        pets in the plannnet🐾
+      </div>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand className="header" as={Link} to="/">
             Bark Side of the Moon
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar" />
@@ -28,6 +34,9 @@ const AppNavbar = () => {
                   </Nav.Link>
                   <Nav.Link as={Link} to="/adoptionForm">
                     Adoption Form
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/donations">
+                    Donations
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
