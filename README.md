@@ -8,12 +8,6 @@
 
 _A single-page application that allows a user to search and find the pet they might fall inlove with, Uses API with Apollo server to search pets. This app was built with a MERN stack._
 
-#### Languages Used: 
-
-![Language](https://img.shields.io/badge/HTML-green.svg "Language Badge")
-![Language](https://img.shields.io/badge/CSS-blue.svg "Language Badge")
-![Language](https://img.shields.io/badge/JavaScript-red.svg "Language Badge")
-
 ## Table of Contents
 
 [Installation](#installation)
