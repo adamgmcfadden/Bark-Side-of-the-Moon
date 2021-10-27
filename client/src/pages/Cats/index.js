@@ -113,13 +113,13 @@ function catCards() {
             <br />
 
             <div class="card-text">
-              <h2>{catArray.name}</h2>
-              <h3>{catArray.description}</h3>
-              <h3>{catArray.breed}</h3>
-              <h3>{catArray.age}</h3>
-              <a href={catArray.link} target="_blank" alt="Link to cats page">
 
-                {" "}
+              <h2>{cats.name}</h2>
+              <h3>{cats.description}</h3>
+              <h3>{cats.breed}</h3>
+              <h3>{cats.age}</h3>
+              <a href={cats.link} target="_blank" alt="Link to cats page">
+
                 Link
               </a>
               <button className="btn-fav">
