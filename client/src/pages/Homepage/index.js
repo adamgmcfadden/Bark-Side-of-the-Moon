@@ -2,13 +2,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import dogs1 from "../../assets/images/dogs1.png";
-import dogs3 from "../../assets/images/dogs3.png";
-import dogs6 from "../../assets/images/dogs6.png";
+//import dogs3 from "../../assets/images/dogs3.png";
+//import dogs6 from "../../assets/images/dogs6.png";
 import { FaCat } from "react-icons/fa";
 import { FaDog } from "react-icons/fa";
 
 function Homepage() {
-  
   return (
     <div className="homepage justify-content-center">
       <h1 className="title">
@@ -22,6 +21,8 @@ function Homepage() {
           <img className="slides-pic" src={dogs1} />
           <div className="text ">Find Me A Forever Home</div>
         </div>
+
+        {/*
 
         <div className="petSlides fade">
           <img className="slides-pic" src={dogs6} />
@@ -40,6 +41,7 @@ function Homepage() {
         <span className="dot" onClick="currentSlide(2)"></span>
         <span className="dot" onClick="currentSlide(3)"></span>
       </div>
+
       <div className="dotss">
         <div className="dropdown">
           <button className="dropbtn">Choose Your Pet</button>
