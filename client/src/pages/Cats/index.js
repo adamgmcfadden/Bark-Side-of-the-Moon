@@ -29,7 +29,7 @@ async function catData() {
 
   // Create an Array we will load our cats into
   const cats = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < searchResults.length; i++) {
     const catName = searchResults[i].name;
     console.log(catName);
 
