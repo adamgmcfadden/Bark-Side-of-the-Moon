@@ -73,7 +73,7 @@ function catCards() {
               alt="Cats Profiles"
             />
             <br />
-            <div class="card-text">
+            <div className="card-text">
               <h2>{cats.name}</h2>
               <h3>{cats.description}</h3>
               <h3>{cats.breed}</h3>
@@ -82,8 +82,8 @@ function catCards() {
                 {" "}
                 Link
               </a>
-              <button class="btn-fav">
-                <i class="fas fa-heart"></i>
+              <button className="btn-fav">
+                <i className="fas fa-heart"></i>
               </button>
             </div>
           </div>
